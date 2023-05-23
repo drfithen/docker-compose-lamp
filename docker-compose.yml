@@ -71,3 +71,5 @@ services:
     image: redis:latest
     ports:
       - "127.0.0.1:${HOST_MACHINE_REDIS_PORT}:6379"
+volumes:
+  APACHE_DOCUMENT_ROOT:
