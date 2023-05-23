@@ -72,4 +72,11 @@ services:
     ports:
       - "127.0.0.1:${HOST_MACHINE_REDIS_PORT}:6379"
 volumes:
-  APACHE_DOCUMENT_ROOT:
+  ${DOCUMENT_ROOT-./www}:
+  ${PHP_INI-./config/php/php.ini}:
+  ${LOG_DIR-./logs/apache2}:
+  ${XDEBUG_LOG_DIR-./logs/xdebug}:
+  ${MYSQL_INITDB_DIR-./config/initdb}:
+  ${MYSQL_DATA_DIR-./data/mysql}:
+  ${MYSQL_LOG_DIR-./logs/mysql}:
+  ${SSL_DIR-./config/ssl}:
